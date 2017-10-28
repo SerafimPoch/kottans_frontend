@@ -9,4 +9,4 @@
  ## Task 1
  
 1. Linux Command Line Basics
-(https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
+![Task 1-1](task_1/test_1.1.png)
