@@ -5,3 +5,8 @@
  - Information about conflicts.
  - Nothing actually.
  - I'll use all the things that I learned.
+ 
+ ## Task 1
+ 
+1. Linux Command Line Basics
+![Task 1-1](task_1/test_1.1.png)
