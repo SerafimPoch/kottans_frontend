@@ -20,9 +20,9 @@
 ## Task 2
 
 1. What is Version Control 
-![Task 2-1](task_02/test_2.1.png)
+![Task 02-1](task_02/test_2.1.png)
 
 2. GitHub & Collaboration 
-![Task 2-2](task_02/test_2.2.png)
+![Task 02-2](task_02/test_2.2.png)
 
 
