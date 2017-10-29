@@ -20,7 +20,7 @@
 ## Task 2
 
 1. What is Version Control 
-![Task 1-3](task_02/test_2.1.png)
+![Task 1-3](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_02%20/test_2.1.png)
 
 2. GitHub & Collaboration 
 ![Task 1-4](task_02/test_2.2.png)
