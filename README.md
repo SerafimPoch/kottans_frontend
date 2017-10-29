@@ -1,4 +1,5 @@
 # kottans frontend course
+
 ## Task 0
 ###  Here is my answers to three questions, which was listed in general requirements:
 
@@ -6,7 +7,13 @@
  - Nothing actually.
  - I'll use all the things that I learned.
 
+
  ## Task 1
+ 
+ - Linux commands and Linux security.
+ - All information about Networks.
+ - I'll use all Linux commands.
+ 
  
 1. Linux Command Line Basics
 ![Task 1-1](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
