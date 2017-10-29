@@ -14,7 +14,8 @@
  - All information about Networks.
  - I'll use all Linux commands.
  
- 
+### List of screenshots:
+
 1. Linux Command Line Basics
 ![Task 1-1](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
 
@@ -24,7 +25,10 @@
 3. Networking for Web Developers
 ![Task 1-3](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.3.png)
 
+
 ## Task 2
+
+### List of screenshots:
 
 1. What is Version Control 
 ![Task 1-3](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_02%20/test_2.1.png)
