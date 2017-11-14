@@ -9,7 +9,7 @@
 
  ## Task 1
  
- - Linux commands and Linux security.
+ [Linux Command Line Basics](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
  - All information about Networks.
  - I'll use all Linux commands.
  
