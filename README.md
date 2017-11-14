@@ -9,7 +9,7 @@
 
  ## Task 1
  
- - [Linux Command Line Basics](https://raw.githubusercontent.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
+ - [Linux Command Line Basics](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.1.png)
  - [Configuring Linux Web Servers](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.2.png)
  - [Networking for Web Developers](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_1/test_1.3.png)
  
@@ -18,5 +18,25 @@
 
 - [What is Version Control](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_02%20/test_2.1.png)
 - [GitHub & Collaboration ](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_02%20/test_2.2.png)
+
+
+## Task 3 
+- [Intro to HTML & CSS](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_03/test%203.png)
+
+
+## Task 4
+- [Responsive Web Design Fundamentals](https://github.com/SerafimPoch/kottans_frontend/blob/master/task_04/task4.png)
+
+
+## Task 5 
+- [x] Intro to JS
+
+
+## Task 6
+- [x] Object Oriented JS
+
+
+## Task 7 
+- [x] Offline Web Applications
 
 
