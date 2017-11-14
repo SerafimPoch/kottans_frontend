@@ -1,5 +1,6 @@
 # kottans frontend course
 
+
 ### Task 0
 - Information about conflicts.
 - Nothing actually.
