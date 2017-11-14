@@ -1,7 +1,22 @@
 body {
-    background-color: #CAFFB3;    
+    background-color: white; 
 }
 
 header {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 50px auto;
+}
+
+main {
+
+}
+
+footer img, figure  {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
 }
