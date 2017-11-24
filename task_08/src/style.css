@@ -8,15 +8,44 @@ header {
     margin: 50px auto;
 }
 
-main {
 
-}
-
-footer img, figure  {
+footer img, figure {
     display: block;
     width: 90px;
     height: 90px;
-    margin: auto;
+    margin: 35px auto 10px auto;
     font-family: 'Acme', sans-serif;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+main {
+    background-color: gray;
+    border:#999 1px solid;
+    max-width:900px;
+	padding:24px;
+    margin:-25px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+main > div {
+    background: url('/home/serafim/Git/Kottans/img/card.png') no-repeat;
+    border:#000 1px solid;
+    margin: 5px auto;
+	width:150px;
+	height:200px;
+	float:left;
+	cursor:pointer;
+    text-align:center;
+    box-shadow: 4px 5px 5px black;
 }
