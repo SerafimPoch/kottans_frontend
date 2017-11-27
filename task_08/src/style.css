@@ -27,7 +27,6 @@ footer img, figure {
 
 
 main {
-    background-color: gray;
     border:#999 1px solid;
     max-width:900px;
 	padding:24px;
@@ -39,7 +38,7 @@ main {
 }
 
 main > div {
-    background: url('/home/serafim/Git/Kottans/task_08/img/card.png') no-repeat;
+    background: url('../img/card.png') no-repeat;
     border:#000 1px solid;
     margin: 5px auto;
 	width:150px;
