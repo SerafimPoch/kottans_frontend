@@ -39,7 +39,7 @@ main {
 }
 
 main > div {
-    background: url('/home/serafim/Git/Kottans/img/card.png') no-repeat;
+    background: url('/home/serafim/Git/Kottans/task_08/img/card.png') no-repeat;
     border:#000 1px solid;
     margin: 5px auto;
 	width:150px;
