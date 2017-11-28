@@ -18,33 +18,98 @@ footer img, figure {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
 main {
-    border:#999 1px solid;
-    max-width:900px;
-	padding:24px;
-    margin:-25px auto;
+    max-width: 760px;
+    margin: 0 auto;
+    margin-top: 1em;
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+
 }
 
-main > div {
-    background: url('../img/card.png') no-repeat;
-    border:#000 1px solid;
-    margin: 5px auto;
-	width:150px;
-	height:200px;
-	float:left;
-	cursor:pointer;
-    text-align:center;
-    box-shadow: 4px 5px 5px black;
+
+
+.flip-container{
+    width: 24%;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+    min-height: 150px;
+    cursor: pointer;
+    perspective: 1000px;
 }
+
+.flip-container {
+	perspective: 1000px;
+}
+
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+
+
+.front, .back {
+	width: 100%;
+    min-height: 150px;
+    /* box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.11); */
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+    z-index: 2;
+    background: url(../img/card.png) center center no-repeat;
+    transform: rotateY(0deg);
+    background-size: contain;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+    .cats_0{
+        background: url(../img/cats_0.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .cats_1{
+        background: url(../img/cats_1.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .cats_2{
+        background: url(../img/cats_2.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .cats_3{
+        background: url(../img/cats_3.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .cats_4{
+        background: url(../img/cats_4.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .cats_5{
+        background: url(../img/cats_5.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+
+    
