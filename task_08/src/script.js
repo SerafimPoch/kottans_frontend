@@ -1,7 +1,7 @@
 const main    = document.querySelector('main')
 const flipper = document.querySelector('.flipper')
 const front   = document.querySelector('.front')
-const cats_0 = document.querySelector('.cat_0')
+
 
 let memory_values = [];
 let memory_tile = [];
@@ -33,7 +33,7 @@ const new_board = () => {
          return store.map(x => {
            main.insertAdjacentHTML('beforeend',
                '<div class="flip-container ">\
-               <div onclick="handleClick(this,\''+x.img+'\')"  class="flipper">\
+               <div onclick="handleClick(this,\''+x.img+'\')" class="flipper" " id=' + x.img + ' >\
                <div  class="front"></div>\
                <div class="back '+x.img+'"></div>\
                </div>\
@@ -44,18 +44,48 @@ const new_board = () => {
 
 
 const handleClick= (x,y) => {
-    if(memory_values.length < 2)
-    x.className += ' open'
- 
-    
-    
+    if(memory_values.length < 2){
+        x.classList.add('open')
+
+        if(memory_values.length == 0) {
+            memory_values.push(y);
+            memory_tile.push(x.id);
+        } else if(memory_values.length == 1) {
+            memory_values.push(y);
+            memory_tile.push(x.id);
+
+           if(memory_values[0] === memory_values[1]){
+            let title1 = document.getElementById(memory_tile[0])
+            title1.className += " hide";
+            var tile2 = document.getElementById(memory_tile[1]);
+            tile2.className += " hide";
+            cards_flipped += 2
+             
+           }
+           if(cards_flipped == cards.length) {
+            setTimeout(function() {
+                alert("You Win!!!! \n Generating new game");
+                document.querySelector('.flip-container').innerHTML = "";
+                new_board();
+            }, 1000) 
+        } else {
+            function flip2Back() {
+                var tile_1 = document.getElementById(memory_tile[0]);
+                var tile_2 = document.getElementById(memory_tile[1]);
+                tile_1.classList.remove("open");
+                tile_2.classList.remove("open");
+                memory_values = [];
+                memory_tile = [];
+            }
+            setTimeout(flip2Back, 700);
+        }
+
+    }
+     
+}
 }
 
 new_board()
-// const flip_container = document.querySelector('.flip-container')
-// flip_container.classList.add('flipped')
-//          x.classList.add(y)
-
 
 
 
