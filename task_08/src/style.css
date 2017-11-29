@@ -29,7 +29,12 @@ main {
 
 }
 
-
+.flipped {
+		box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.51);
+        /* transform: scale(1.01);
+        transition: all ease-out 0.2s; */
+        transform: rotateY(180deg);
+}
 
 .flip-container{
     width: 24%;
@@ -41,14 +46,12 @@ main {
 }
 
 .flip-container {
-	perspective: 1000px;
+    perspective: 1000px;
 }
 
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-
+/* .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+} */
 
 .front, .back {
 	width: 100%;
@@ -70,6 +73,7 @@ main {
 }
 
 .front {
+    
     z-index: 2;
     background: url(../img/card.png) center center no-repeat;
     transform: rotateY(0deg);
