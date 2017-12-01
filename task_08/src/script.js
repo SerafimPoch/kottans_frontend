@@ -1,11 +1,9 @@
-const main    = document.querySelector('main')
+let main = document.querySelector('main')
 const flipper = document.querySelector('.flipper')
 const front   = document.querySelector('.front')
 
 
-let memory_values = [];
-let memory_tile = [];
-let cards_flipped = 0
+
 
 const cards = [
     {id:1,  img:'cats_0'},
@@ -33,7 +31,7 @@ const new_board = () => {
          return store.map(x => {
            main.insertAdjacentHTML('beforeend',
                '<div class="flip-container ">\
-               <div onclick="handleClick(this,\''+x.img+'\')" class="flipper" " id=' + x.img + ' >\
+               <div onclick="handleClick(this,\''+x.img+'\')" class="flipper " id=' + x.img + ' >\
                <div  class="front"></div>\
                <div class="back '+x.img+'"></div>\
                </div>\
@@ -42,48 +40,58 @@ const new_board = () => {
             })                     
 }
 
+let memory_values = []
+let memory_tile = []
+let cards_flipped = 0
 
 const handleClick= (x,y) => {
+
     if(memory_values.length < 2){
         x.classList.add('open')
 
-        if(memory_values.length == 0) {
-            memory_values.push(y);
-            memory_tile.push(x.id);
-        } else if(memory_values.length == 1) {
-            memory_values.push(y);
-            memory_tile.push(x.id);
+    if(memory_values.length == 0){
+        memory_values.push(y)
+        memory_tile.push(x.id)
 
-           if(memory_values[0] === memory_values[1]){
-            let title1 = document.getElementById(memory_tile[0])
-            title1.className += " hide";
-            var tile2 = document.getElementById(memory_tile[1]);
-            tile2.className += " hide";
+    } else if(memory_values.length == 1) {
+        memory_values.push(y)
+        memory_tile.push(x.id)
+
+        if(memory_values[0] === memory_values[1]){
             cards_flipped += 2
-             
-           }
-           if(cards_flipped == cards.length) {
-            setTimeout(function() {
-                alert("You Win!!!! \n Generating new game");
-                document.querySelector('.flip-container').innerHTML = "";
-                new_board();
-            }, 1000) 
+            var tile1 = document.getElementById(memory_values[0]);
+            var tile2 = document.getElementById(memory_values[1]);
+                memory_values = []
+                memory_tile = []
+        if(cards_flipped == cards.length){
+            alert("Board cleared... generating new board")
+             main.innerHTML = ''
+             new_board()
+        }
         } else {
-            function flip2Back() {
-                var tile_1 = document.getElementById(memory_tile[0]);
-                var tile_2 = document.getElementById(memory_tile[1]);
-                tile_1.classList.remove("open");
-                tile_2.classList.remove("open");
-                memory_values = [];
-                memory_tile = [];
+            function flip_back(){
+                let tile_1 = document.getElementById(memory_values[0])
+                let tile_2 = document.getElementById(memory_values[1])
+                    tile_1.classList.remove('open')
+                    tile_1.classList.add('hide')
+                    tile_2.classList.remove('open')
+                    tile_2.classList.add('hide')
+                
             }
-            setTimeout(flip2Back, 700);
+            flip_back()
         }
 
+    } 
     }
-     
+    
+    
 }
-}
+
+
+console.log(memory_values)
+console.log(memory_tile)
+console.log(cards_flipped)
+
 
 new_board()
 
