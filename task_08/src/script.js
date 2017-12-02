@@ -1,8 +1,7 @@
 let main = document.querySelector('main')
-
-let memory_values = []
-let memory_tile = []
-let cards_flipped = 0
+let memoryValues = []
+let memoryTile = []
+let cardsFlipped = 0
 
 const cards = [
     {id:1,  img:'cats_0'},
@@ -21,15 +20,15 @@ const cards = [
 
 const shuffle = (a) => a.sort(()=> 0.5 - Math.random())
 
-const new_board = () => { 
-    cards_flipped = 0
+const newBoard = () => { 
+    cardsFlipped = 0
     let store = shuffle(cards)
           store.forEach(x => {
            main.insertAdjacentHTML('beforeend',
                '<div class="flip-container ">\
                <div onclick="handleClick(this,\''+x.img+'\')" class="flipper " id=' + x.id + ' >\
                <div  class="front"></div>\
-               <div class="back '+x.img+'"></div>\
+               <div  class="back '+x.img+'"></div>\
                </div>\
                </div>' 
                )    
@@ -37,12 +36,12 @@ const new_board = () => {
 }
 
 const hide = () =>{
-    let tile1 = document.getElementById(memory_tile[0])
-    let tile2 = document.getElementById(memory_tile[1])
+    let tile1 = document.getElementById(memoryTile[0])
+    let tile2 = document.getElementById(memoryTile[1])
         tile1.className = 'flipper hide'
         tile2.className = 'flipper hide'
-        memory_values = []
-        memory_tile = []
+        memoryValues = []
+        memoryTile = []
 }
 
 const newGener = () =>{
@@ -52,33 +51,33 @@ const newGener = () =>{
 }
 
 const flip_back = () =>{
-    let tile_1 = document.getElementById(memory_tile[0])
-    let tile_2 = document.getElementById(memory_tile[1])
-        tile_1.classList.remove('open')
-        tile_2.classList.remove('open')
-        memory_values = []
-        memory_tile = []
+    let tile3 = document.getElementById(memoryTile[0])
+    let tile4 = document.getElementById(memoryTile[1])
+        tile3.classList.remove('open')
+        tile4.classList.remove('open')
+        memoryValues = []
+        memoryTile = []
 }
 
 const handleClick= (x,y) => {
 
-    if(memory_values.length < 2){
+    if(memoryValues.length < 2){
         x.classList.add('open')
             
-    if(memory_values.length == 0){
-        memory_values.push(y)
-        memory_tile.push(x.id)
+    if(memoryValues.length == 0){
+        memoryValues.push(y)
+        memoryTile.push(x.id)
        
-    } else if(memory_values.length == 1) {
-        memory_values.push(y)
-        memory_tile.push(x.id)
+    } else if(memoryValues.length == 1) {
+        memoryValues.push(y)
+        memoryTile.push(x.id)
         
-        if(memory_values[0] == memory_values[1]){
-            cards_flipped += 2
+        if(memoryValues[0] == memoryValues[1]){
+            cardsFlipped += 2
 
             setTimeout(hide,800)
 
-        if(cards_flipped == cards.length){
+        if(cardsFlipped == cards.length){
                
             setTimeout(newGener,1200)
         }
@@ -91,7 +90,7 @@ const handleClick= (x,y) => {
     }   
 }
 
-    new_board()
+    newBoard()
 
 
 
