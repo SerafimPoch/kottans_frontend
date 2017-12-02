@@ -66,7 +66,6 @@ main {
 }
 
 .front {
-    
     z-index: 2;
     background: url(../img/card.png) center center no-repeat;
     transform: rotateY(0deg);
