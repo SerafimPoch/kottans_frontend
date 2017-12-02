@@ -55,28 +55,30 @@ const handleClick= (x,y) => {
     if(memory_values.length == 0){
         memory_values.push(y)
         memory_tile.push(x.id)
-        console.log(memory_values)
+       
     } else if(memory_values.length == 1) {
         memory_values.push(y)
         memory_tile.push(x.id)
-        console.log(memory_values)
+        
         if(memory_values[0] == memory_values[1]){
             cards_flipped += 2
-            let tile1 = document.getElementById(memory_tile[0])
-            let tile2 = document.getElementById(memory_tile[1])
-            console.log(memory_values[0])
-            console.log(memory_values[1])
-            console.log(tile1)
-            console.log(tile2)
-                tile1.className = 'flipper hide'
-                tile2.className = 'flipper hide'
-                memory_values = []
-                memory_tile = []
+            function hide(){
+                let tile1 = document.getElementById(memory_tile[0])
+                let tile2 = document.getElementById(memory_tile[1])
+                    tile1.className = 'flipper hide'
+                    tile2.className = 'flipper hide'
+                    memory_values = []
+                    memory_tile = []
+            }
+            setTimeout(hide,800)
 
         if(cards_flipped == cards.length){
-            alert("Board cleared... generating new board")
-             main.innerHTML = ''
-             new_board()
+                function newGener() {
+                    alert("Board cleared... generating new board")
+                        main.innerHTML = ''
+                            new_board()
+                }
+            setTimeout(newGener,1200)
         }
         } else {
             function flip_back(){
@@ -87,7 +89,7 @@ const handleClick= (x,y) => {
                     memory_values = []
                     memory_tile = []
             }
-            setTimeout(flip_back,1000)
+            setTimeout(flip_back,800)
         }
 
     } 
