@@ -29,5 +29,7 @@
 ---
 ### Task 7 
 - [x] Offline Web Applications
-
+---
+### Task 8 (Memory Pair Game)
+- [Memory Pair game on gh-pages](https://serafimpoch.github.io./)
 
