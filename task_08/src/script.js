@@ -1,12 +1,8 @@
 let main = document.querySelector('main')
-const flipper = document.querySelector('.flipper')
-const front   = document.querySelector('.front')
-
 
 let memory_values = []
 let memory_tile = []
 let cards_flipped = 0
-
 
 const cards = [
     {id:1,  img:'cats_0'},
@@ -25,9 +21,6 @@ const cards = [
 
 const shuffle = (a) => a.sort(()=> 0.5 - Math.random())
 
-
-
-
 const new_board = () => { 
     cards_flipped = 0
     let store = shuffle(cards)
@@ -43,12 +36,8 @@ const new_board = () => {
             })                     
 }
 
-
-
-
 const handleClick= (x,y) => {
-   
-    
+
     if(memory_values.length < 2){
         x.classList.add('open')
             
@@ -62,7 +51,7 @@ const handleClick= (x,y) => {
         
         if(memory_values[0] == memory_values[1]){
             cards_flipped += 2
-            function hide(){
+            const hide = () =>{
                 let tile1 = document.getElementById(memory_tile[0])
                 let tile2 = document.getElementById(memory_tile[1])
                     tile1.className = 'flipper hide'
@@ -73,15 +62,15 @@ const handleClick= (x,y) => {
             setTimeout(hide,800)
 
         if(cards_flipped == cards.length){
-                function newGener() {
-                    alert("Board cleared... generating new board")
+               const newGener = () =>{
+                    alert("You win!")
                         main.innerHTML = ''
                             new_board()
                 }
             setTimeout(newGener,1200)
         }
         } else {
-            function flip_back(){
+            const flip_back = () =>{
                 let tile_1 = document.getElementById(memory_tile[0])
                 let tile_2 = document.getElementById(memory_tile[1])
                     tile_1.classList.remove('open')
@@ -93,18 +82,10 @@ const handleClick= (x,y) => {
         }
 
     } 
-    }
-    
-    
+    }   
 }
 
-
-// console.log(memory_values)
-// console.log(memory_tile)
-// console.log(cards_flipped)
-
-
-new_board()
+    new_board()
 
 
 
