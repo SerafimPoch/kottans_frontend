@@ -47,10 +47,10 @@ const hide = () =>{
 const newGener = () =>{
     alert("You win!")
         main.innerHTML = ''
-            new_board()
+        newBoard()
 }
 
-const flip_back = () =>{
+const flipBack = () =>{
     let tile3 = document.getElementById(memoryTile[0])
     let tile4 = document.getElementById(memoryTile[1])
         tile3.classList.remove('open')
@@ -64,7 +64,7 @@ const handleClick= (x,y) => {
     if(memoryValues.length < 2){
         x.classList.add('open')
             
-    if(memoryValues.length == 0){
+    if(memoryValues.length == 0 ){
         memoryValues.push(y)
         memoryTile.push(x.id)
        
@@ -72,7 +72,7 @@ const handleClick= (x,y) => {
         memoryValues.push(y)
         memoryTile.push(x.id)
         
-        if(memoryValues[0] == memoryValues[1]){
+        if(memoryValues[0] == memoryValues[1]  ){
             cardsFlipped += 2
 
             setTimeout(hide,800)
@@ -83,7 +83,7 @@ const handleClick= (x,y) => {
         }
         } else {
             
-            setTimeout(flip_back,800)
+            setTimeout(flipBack,800)
         }
 
     } 
