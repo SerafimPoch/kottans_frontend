@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Bootstrap 4!</title>
+    <title>Weather App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -21,7 +21,7 @@
                             </div>
                             <div class='col-lg-3 col-md-3 col-sm-4 col-xs-3 '>
                                 <div class='form-group'>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your city">
+                                    <input type="text" class="form-control input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your city">
                                     <small id="emailHelp" class="form-text text-white ">Show your local weather</small>
                                         </div>
                             </div>
@@ -35,6 +35,24 @@
             </div>
             </div>
                 </header>
+
+        <main role='main'>
+            <div class='container '>
+                <div class='row justify-content-center align-items-center'>
+                    <div class='col-lg-2'>
+                        <div class="temperature"><span id="temperature">0</span>&deg;</div>
+                        <div class="location"><span id="location">Unknown</span></div> 
+                    </div>
+                    <div class='col-lg-2 align-self-start '>
+                        <div><img src='img/200.svg' class='icon-main'></div>
+                        <div>
+                            <img src='img/humidity.svg' class='img-fluid humidity-icon'>
+                            <span class="humidity">0</span>%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
             
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
