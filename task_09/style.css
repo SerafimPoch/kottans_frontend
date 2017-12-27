@@ -41,3 +41,24 @@
     width: 85px;
 }
 
+ .day {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.loc-card{
+    font-size: 20px;
+}
+
+.card {
+    margin: 25px auto;
+}
+
+.main-forecast {
+    margin: 10px auto;
+}
+
+.card-blocks {
+    margin: 60px auto;
+}
+
