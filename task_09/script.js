@@ -6,11 +6,7 @@ let city = ''
 const options = { weekday: 'long',  day: 'numeric' }
     // data_1.innerHTML = new Date('2017-12-27 18:00:00').toLocaleString('en-US', options) // date on Api dt_txt
 
-button.addEventListener('click',()=>{  
-    city += input.value
-        input.value = ''
-        
-})
+
 
 
 
