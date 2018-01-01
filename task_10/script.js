@@ -10,34 +10,25 @@ const temp_4      = document.getElementById('temperature_4')
 const temp_5      = document.getElementById('temperature_5')
 const temp_6      = document.getElementById('temperature_6')
 
-
 const loc_1       = document.getElementById('location_1')
-
 
 const data_2      = document.getElementById('data_2') 
 const data_3      = document.getElementById('data_3')
 const data_4      = document.getElementById('data_4')
 const data_5      = document.getElementById('data_5')
 
+const icon        = document.getElementById('icon-main')
+const icon_2      = document.getElementById('icon_2')
+const icon_3      = document.getElementById('icon_3')
+const icon_4      = document.getElementById('icon_4')
+const icon_5      = document.getElementById('icon_5')
 
-let icon        = document.getElementById('icon-main')
-let icon_1      = document.getElementById('icon_1')
-let icon_2      = document.getElementById('icon_2')
-let icon_3      = document.getElementById('icon_3')
-let icon_4      = document.getElementById('icon_4')
-let icon_5      = document.getElementById('icon_5')
-let icon_6      = document.getElementById('icon_6')
-let icon_7      = document.getElementById('icon_7')
-let icon_8      = document.getElementById('icon_8')
-
-let humidity_1  = document.getElementById('humidity_1')
-
+const humidity_1  = document.getElementById('humidity_1')
 const options   = { weekday: 'long', day: 'numeric' }
    
 
-
 const updateByZip = (zip) => {
-    let url = 'http://api.openweathermap.org/data/2.5/forecast?'
+    const url = 'http://api.openweathermap.org/data/2.5/forecast?'
         + 'zip=' + zip + '&APPID=' + key
     sendRequest(url) 
 }
@@ -47,16 +38,20 @@ const Faren = (c) => Math.round(c * (9/5) - 459.67)
 const Celc = (k) => Math.round(k - 273.15)
 
 const sendRequest = (url) => {  
-    let link = fetch(url)
+    const link = fetch(url)
         .then(data => data.json())
             .then(data =>{
-        let main = () => {
-            let weather = {} 
-                let second  = data.list[4].dt_txt
-                let third   = data.list[10].dt_txt
-                let fourth  = data.list[18].dt_txt
-                let fifth   = data.list[26].dt_txt
-                         weather.icon      = data.list[0].weather[0].id
+        const main = () => {
+            const weather = {} 
+                const second  = data.list[4].dt_txt
+                const third   = data.list[10].dt_txt
+                const fourth  = data.list[18].dt_txt
+                const fifth   = data.list[26].dt_txt
+                         weather.icon        = data.list[0].weather[0].id
+                         weather.icon_2      = data.list[10].weather[0].id
+                         weather.icon_3      = data.list[18].weather[0].id
+                         weather.icon_4      = data.list[26].weather[0].id
+                         weather.icon_4      = data.list[34].weather[0].id
                          weather.humidity  = data.list[0].main.humidity
                          weather.loc       = data.city.name
                          weather.data_2    = new Date(second).toLocaleString('ru', options)
@@ -71,12 +66,16 @@ const sendRequest = (url) => {
                     update(weather)
         }
             buttonF.addEventListener('click', ()=> {
-                let weather = {} 
-                let second  = data.list[4].dt_txt
-                let third   = data.list[10].dt_txt
-                let fourth  = data.list[18].dt_txt
-                let fifth   = data.list[26].dt_txt
+                const weather = {} 
+                const second  = data.list[4].dt_txt
+                const third   = data.list[10].dt_txt
+                const fourth  = data.list[18].dt_txt
+                const fifth   = data.list[26].dt_txt
                          weather.icon      = data.list[0].weather[0].id
+                         weather.icon_2      = data.list[10].weather[0].id
+                         weather.icon_3      = data.list[18].weather[0].id
+                         weather.icon_4      = data.list[26].weather[0].id
+                         weather.icon_4      = data.list[34].weather[0].id
                          weather.humidity  = data.list[0].main.humidity
                          weather.loc       = data.city.name
                          weather.data_2    = new Date(second).toLocaleString('ru', options)
@@ -93,13 +92,10 @@ const sendRequest = (url) => {
 
             buttonC.addEventListener('click',()=>{
                     main()
-            })
-
-        main()
-
-            })
-
-}
+                })
+    main()
+})
+        }
 
 const update = (weather) => {
     data_2.innerHTML      = weather.data_2
@@ -113,8 +109,13 @@ const update = (weather) => {
     temp_5.innerHTML      = weather.temp_5
     temp_6.innerHTML      = weather.temp_6
 
-    loc_1.innerHTML       = weather.loc
-    icon.src              = 'img/' + weather.icon + '.svg'
+    loc_1.innerHTML         = weather.loc
+    icon.src                = 'img/' + weather.icon + '.svg'
+    icon_2.src              = 'img/' + weather.icon + '.svg'
+    icon_3.src              = 'img/' + weather.icon + '.svg'
+    icon_4.src              = 'img/' + weather.icon + '.svg'
+    icon_5.src              = 'img/' + weather.icon + '.svg'
+
     humidity_1.innerHTML  = weather.humidity
     
 }  
@@ -124,7 +125,7 @@ const showPosition = (position) => {
 }
  
 const updateByGeo = (lat, lon) => {
-    let url = 'http://api.openweathermap.org/data/2.5/forecast?'
+    const url = 'http://api.openweathermap.org/data/2.5/forecast?'
     +
 	"lat=" + lat +
 	"&lon=" + lon +
@@ -136,7 +137,7 @@ const updateByGeo = (lat, lon) => {
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(showPosition)
         } else {
-            let zip = prompt('Enter yur zip code')
+            const zip = prompt('Enter yur zip code')
             updateByZip(zip)
         }
     })
