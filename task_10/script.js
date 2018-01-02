@@ -42,40 +42,41 @@ const sendRequest = (url) => {
         .then(data => data.json())
             .then(data =>{
         const main = () => {
-            const weather = {} 
-                const second  = data.list[4].dt_txt
-                const third   = data.list[10].dt_txt
-                const fourth  = data.list[18].dt_txt
-                const fifth   = data.list[26].dt_txt
+            let weather = {} 
+                let second  = data.list[5].dt_txt
+                let third   = data.list[10].dt_txt
+                let fourth  = data.list[18].dt_txt
+                let fifth   = data.list[26].dt_txt
                          weather.icon        = data.list[0].weather[0].id
-                         weather.icon_2      = data.list[10].weather[0].id
-                         weather.icon_3      = data.list[18].weather[0].id
-                         weather.icon_4      = data.list[26].weather[0].id
-                         weather.icon_4      = data.list[34].weather[0].id
-                         weather.humidity  = data.list[0].main.humidity
-                         weather.loc       = data.city.name
-                         weather.data_2    = new Date(second).toLocaleString('ru', options)
-                         weather.data_3    = new Date(third).toLocaleString('ru', options)
-                         weather.data_4    = new Date(fourth).toLocaleString('ru', options)
-                         weather.data_5    = new Date(fifth).toLocaleString('ru', options)
-                         weather.temp_1    = Celc(data.list[1].main.temp)
-                         weather.temp_3    = Celc(data.list[10].main.temp)
-                         weather.temp_4    = Celc(data.list[18].main.temp)
-                         weather.temp_5    = Celc(data.list[26].main.temp)
-                         weather.temp_6    = Celc(data.list[34].main.temp)
+                         weather.icon_2      = data.list[5].weather[0].id
+                         weather.icon_3      = data.list[13].weather[0].id
+                         weather.icon_4      = data.list[21].weather[0].id
+                         weather.icon_5      = data.list[29].weather[0].id
+                         weather.humidity    = data.list[0].main.humidity
+                         weather.loc         = data.city.name
+                         weather.data_2      = new Date(second).toLocaleString('ru', options)
+                         weather.data_3      = new Date(third).toLocaleString('ru', options)
+                         weather.data_4      = new Date(fourth).toLocaleString('ru', options)
+                         weather.data_5      = new Date(fifth).toLocaleString('ru', options)
+                         weather.temp_1      = Celc(data.list[1].main.temp)
+                         weather.temp_3      = Celc(data.list[10].main.temp)
+                         weather.temp_4      = Celc(data.list[18].main.temp)
+                         weather.temp_5      = Celc(data.list[26].main.temp)
+                         weather.temp_6      = Celc(data.list[34].main.temp)
                     update(weather)
+                  console.log(weather.icon,weather.icon_2,weather.icon_3,weather.icon_4,weather.icon_5) 
         }
             buttonF.addEventListener('click', ()=> {
-                const weather = {} 
-                const second  = data.list[4].dt_txt
-                const third   = data.list[10].dt_txt
-                const fourth  = data.list[18].dt_txt
-                const fifth   = data.list[26].dt_txt
-                         weather.icon      = data.list[0].weather[0].id
-                         weather.icon_2      = data.list[10].weather[0].id
-                         weather.icon_3      = data.list[18].weather[0].id
-                         weather.icon_4      = data.list[26].weather[0].id
-                         weather.icon_4      = data.list[34].weather[0].id
+                let weather = {} 
+                let second  = data.list[4].dt_txt
+                let third   = data.list[10].dt_txt
+                let fourth  = data.list[18].dt_txt
+                let fifth   = data.list[26].dt_txt
+                         weather.icon        = data.list[0].weather[0].id
+                         weather.icon_2      = data.list[5].weather[0].id
+                         weather.icon_3      = data.list[13].weather[0].id
+                         weather.icon_4      = data.list[21].weather[0].id
+                         weather.icon_5      = data.list[29].weather[0].id
                          weather.humidity  = data.list[0].main.humidity
                          weather.loc       = data.city.name
                          weather.data_2    = new Date(second).toLocaleString('ru', options)
@@ -111,13 +112,13 @@ const update = (weather) => {
 
     loc_1.innerHTML         = weather.loc
     icon.src                = 'img/' + weather.icon + '.svg'
-    icon_2.src              = 'img/' + weather.icon + '.svg'
-    icon_3.src              = 'img/' + weather.icon + '.svg'
-    icon_4.src              = 'img/' + weather.icon + '.svg'
-    icon_5.src              = 'img/' + weather.icon + '.svg'
+    icon_2.src              = 'img/' + weather.icon_2 + '.svg'
+    icon_3.src              = 'img/' + weather.icon_3 + '.svg'
+    icon_4.src              = 'img/' + weather.icon_4 + '.svg'
+    icon_5.src              = 'img/' + weather.icon_5 + '.svg'
 
     humidity_1.innerHTML  = weather.humidity
-    
+   
 }  
 
 const showPosition = (position) => {
@@ -125,19 +126,20 @@ const showPosition = (position) => {
 }
  
 const updateByGeo = (lat, lon) => {
-    const url = 'http://api.openweathermap.org/data/2.5/forecast?'
+    let url = 'http://api.openweathermap.org/data/2.5/forecast?'
     +
 	"lat=" + lat +
 	"&lon=" + lon +
 	"&APPID=" + key
-    sendRequest(url)  
+    sendRequest(url) 
+    console.log(url)
 }
 
     window.addEventListener('load', ()=>{
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(showPosition)
         } else {
-            const zip = prompt('Enter yur zip code')
+            let zip = prompt('Enter yur zip code')
             updateByZip(zip)
         }
     })
