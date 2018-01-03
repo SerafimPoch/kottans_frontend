@@ -25,13 +25,18 @@ const icon_5      = document.getElementById('icon_5')
 
 const humidity_1  = document.getElementById('humidity_1')
 const options   = { weekday: 'long', day: 'numeric' }
-   
-
-const updateByZip = (zip) => {
-    const url = 'http://api.openweathermap.org/data/2.5/forecast?'
-        + 'zip=' + zip + '&APPID=' + key
-    sendRequest(url) 
-}
+  
+button.addEventListener('click',()=>{
+    let city = input.value
+        const updateByCity = (x) => {
+            let url = "http://api.openweathermap.org/data/2.5/forecast?" +
+	            "q=" + x +
+                "&APPID=" + key
+                sendRequest(url)
+        }
+        input.value = ''
+    updateByCity(city)
+})
 
 const Faren = (c) => Math.round(c * (9/5) - 459.67)
 
@@ -64,7 +69,7 @@ const sendRequest = (url) => {
                          weather.temp_5      = Celc(data.list[26].main.temp)
                          weather.temp_6      = Celc(data.list[34].main.temp)
                     update(weather)
-                  console.log(weather.icon,weather.icon_2,weather.icon_3,weather.icon_4,weather.icon_5) 
+        
         }
             buttonF.addEventListener('click', ()=> {
                 let weather = {} 
@@ -132,55 +137,15 @@ const updateByGeo = (lat, lon) => {
 	"&lon=" + lon +
 	"&APPID=" + key
     sendRequest(url) 
-    console.log(url)
 }
 
     window.addEventListener('load', ()=>{
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(showPosition)
         } else {
-            let zip = prompt('Enter yur zip code')
-            updateByZip(zip)
-        }
+            alert('No internet connection')
+        } 
     })
 
 
-
-
-
-
-
-
-
-
-
-
-// data_1.innerHTML = new Date('2017-12-27 18:00:00').toLocaleString('en-US', options) // date on Api dt_txt
-
-
-
-
-
    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-// data_1.innerHTML = new Date('2017-12-27 18:00:00').toLocaleString('en-US', options) // date on Api dt_txt
-
-
-
-
-
-   
-    
