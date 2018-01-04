@@ -35,4 +35,8 @@
 ---
 ### Task 9 
 - [x] Website Performance Optimization
+---
+### Task 10 (Weather App)
+[Weather App](https://serafimpoch.github.io/weather/)
+
 
