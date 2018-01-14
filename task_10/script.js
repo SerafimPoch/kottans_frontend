@@ -30,7 +30,7 @@ const options   = { weekday: 'long', day: 'numeric' }
 
 button.addEventListener('click',()=>{
     let city = input.value
-        const updateByCity = (x) => {
+        const updateByCity = x => {
             let url = "https://api.openweathermap.org/data/2.5/forecast?" +
 	            "q=" + x +
                 "&APPID=" + key
@@ -47,11 +47,11 @@ buttonAdd.addEventListener('click', ()=>{
      input.value = ''
 })
 
-const Faren = (c) => Math.round(c * (9/5) - 459.67)
+const Faren = c => Math.round(c * (9/5) - 459.67)
 
-const Celc = (k) => Math.round(k - 273.15)
+const Celc = k => Math.round(k - 273.15)
 
-const sendRequest = (url) => {  
+const sendRequest = url => {  
     const link = fetch(url)
         .then(data => data.json())
             .then(data =>{
@@ -112,7 +112,7 @@ const sendRequest = (url) => {
 })
         }
 
-const update = (weather) => {
+const update = weather => {
     data_2.innerHTML      = weather.data_2
     data_3.innerHTML      = weather.data_3
     data_4.innerHTML      = weather.data_4
@@ -135,7 +135,7 @@ const update = (weather) => {
    
 }  
 
-const showPosition = (position) => {
+const showPosition = position => {
     updateByGeo(position.coords.latitude, position.coords.longitude)
 }
  
@@ -156,5 +156,3 @@ const updateByGeo = (lat, lon) => {
         } 
     })
 
-
-   
