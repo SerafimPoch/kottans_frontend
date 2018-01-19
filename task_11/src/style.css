@@ -20,26 +20,26 @@ time, mark, audio, video {
 }
 
 body {
-    background: rgb(230, 231, 231);
+    background: #eceef4;
 }
-
-
 
 .head_sec {
 	min-width: 1200px;
 	min-height: 150px;
 	border: 1px solid black;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	align-items: center;
-	
+	align-items: center;	
 }
 
-.go_back {
-	background-color: 	rgb(230, 231, 231);
-	border:  0.5px solid rgb(204, 204, 204);
-	padding: 15px auto;
+  .go_back, .sign_in {
+	background-color: #eceef4;
+	border:  0.5px solid #c9d0e1;
 	width: 	127px;
 	height: 41px;
 	border-radius: 4px;
@@ -50,6 +50,14 @@ body {
 	color: #9A9A9A;
 }
 
+.go_back:hover, .sign_in:hover {
+	border: skyblue 2px solid;
+}
+
+.go_back:active, .sign_in:active {
+	background-color: skyblue
+}
+
 .left_arrow {
 	margin-top: 6px;
 	margin-right: 9px;
@@ -57,9 +65,17 @@ body {
 	height: 12px;
 }
 
+.logo_head {
+	width: 85px;
+	height: 85px;
+}
 
-
-
+.face {
+	margin-top: 6px;
+	margin-right: 9px;
+	width: 12px;
+	height: 12px;
+}
 
 
 
