@@ -24,9 +24,8 @@ body {
 }
 
 .head_sec {
-	min-width: 1200px;
+	width: 100%;
 	min-height: 150px;
-	border: 1px solid black;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -77,10 +76,66 @@ body {
 	height: 12px;
 }
 
+main {
+	margin: 20px auto;
+	background-color: white;
+	width: 1050px;
+	height: 100%;
+}
 
+.order_header {
+	padding-top: 20px;
+	padding-left: 33px;
+	margin-bottom: 10px;
+	font-family: 'FontAwesome';
+	font-size: 12px; 
+}
 
+.order_list {
+	display: flex;
+	width: 100%;
+}
 
+.table_main {
+	padding-left: 50px;
+}
 
+.table_orders_1 > table >tbody > tr {
+	width: 450px;
+	height: 12px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	font-size: 11px;
+}
+
+.table_orders_2 > table >tbody > tr {
+	width: 450px;
+	height: 12px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	font-size: 10px;
+}
+
+#details {
+	padding-left: 12px;
+}
+
+#price {
+	padding-left: 15px;
+}
+#delivery {
+	padding-right: 15px;
+}
+
+#lang_table_4 {
+	padding-right: 32px;
+}
+
+#lang_table_3 {
+	padding-left: 20px;
+}
 
 
 
