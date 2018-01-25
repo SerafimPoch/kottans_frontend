@@ -1,4 +1,5 @@
 let main = document.querySelector('main')
+
 let memoryValues = []
 let memoryTile = []
 let cardsFlipped = 0
@@ -32,7 +33,7 @@ const newBoard = () => {
                </div>\
                </div>' 
                )    
-            })                     
+            })                       
 }
 
 const hide = () =>{

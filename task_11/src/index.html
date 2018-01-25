@@ -3,10 +3,14 @@
     <head>
         <title>Task_11</title>
         <meta charset=utf-8>
+        <meta name=viewport content="width=device-width, initial-scale=1">
         <link rel=stylesheet href=style.css>
+        <link rel=stylesheet href=support.css>
+        <link rel=stylesheet href=reset.css>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
         <script defer src="https://use.fontawesome.com/8e21995b2c.js"></script>
     </head>
-
+    <div class=wrapper>
 <header>
     <section class=head_sec>
         <div>
@@ -32,14 +36,16 @@
 
 <main>
     <section class=order_list>
-        <div class=left>
+        <div class=order_wrapper>
+    <div class=left_main>
+        <div class=left_1>
             <div class=order_header>
                 <h2>
             <i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>
                 YOUR ORDER
                 </h2>
-                </div> 
-            <div class=table_main>
+                </div>    
+    <div class=table_main>
         <div class=table_orders_1>  
             <table>
         <tr>
@@ -62,13 +68,413 @@
     </div>
     </div>
         </div> 
-        <div clas=right>
-
+        <div class=button_order>
+            <button class=place_order>PLACE ORDER</button>
+            <button class=print_a_quote>PRINT A QUOTE</button>
+        </div>
+        </div> 
+    <div class=right>
+        <div class=help_center>
+            <h2>
+        <i class="fa fa-life-ring ring" aria-hidden="true"></i>
+                HELP CENTER
+            </h2>
             </div>
+        <div class=right_text>
+            <p class='right_text_2'>
+                If you need assistance while palcing your
+                order, contact one of our beloved Project 
+                Manager by phone or email.
+            </p>
+            </div>
+        <div class=right_adress>
+                <adress class=help_contact>
+                        <a class=phone 
+                           href="tel">
+                        +971 (0) 555 555
+                        </a>
+                        <a class=email 
+                           href="mailto:help@qtest.com">
+                           help@qtest.com
+                        </a>
+                    </adress>
+        </div>
+           </div> 
+           </div>
     </section>
-
+        <section class=select_what>
+            <div class=second_block>
+        <p class=second_block_text>SELECT WHAT YOU WANT TO TRANSLATE</p>
+            </div>
+        </section>
+    <section class=three_labels>
+        <div class=first_label>
+            <label class=select_type>
+                <input hidden required 
+                       type=radio 
+                       name=var 
+                       value=website>
+                <div class=select_wrapper>
+                    <img class=select_img 
+                         src=../img/website.png 
+                         alt=website>
+                    <p class=label_text>Website</p>
+                </div>
+            </label>
+        </div>
+            <div class=second_label>
+                 <label class=select_type>
+                     <input hidden required 
+                            type=radio 
+                            name=var 
+                            value=website>
+                        <div class=select_wrapper>
+                            <img class=select_img 
+                                 src=../img/documents.png 
+                                 alt=documents>
+                            <p class=label_text>Documents</p>
+                        </div>
+                </label>
+            </div>
+                <div class=third_label>
+                    <label class=select_type>
+                        <input hidden required 
+                               type=radio 
+                               name=var 
+                               value=website>
+                            <div class=select_wrapper>
+                                <img class=select_img 
+                                     src=../img/social-account.png 
+                                     alt=social_account>
+                            <p class=label_text>Social Account</p>
+                            </div>
+                    </label>
+                </div>
+    </section>
+        <section class=upload>
+            <div class=upload_doc>
+                 <div class=number_one>
+                    <p class=number_one_symbol>1</p>                
+                </div>
+                <div class=doc_text>
+                    <p class=doc_text_style>Upload your documents</p>
+                </div>
+                <div class=small_doc_text>
+                    <p class=small_doc_text_style>(Doc, Docx, Text, PDF, Markdown)</p>
+                </div>
+            </div>
+            <div class="upload_file">
+                    <label for="upload" 
+                          class="file-upload__label">
+                        Upload a new file
+                    <input id="upload" 
+                           class="file-upload__input" 
+                           type="file" 
+                           name="file-upload">
+                    </label>
+                </div>
+             <div class=upload_table>
+                <div class=up_tb_container>
+                    <div class=container_1>
+                            <div class=file_name>
+                                <p>FILE NAME</p>
+                            </div>
+                            <div class=biss_1>
+                                <img class=text_img 
+                                     src=../img/text-file.png
+                                     alt=text_img>
+                                <p class=biss_1_text_1>
+                                    business_operations.docx
+                                </p>
+                            </div>
+                            <div class=biss_2>
+                                    <img class=text_img 
+                                    src=../img/text-file.png
+                                    alt=text_img>
+                               <p class=biss_2_text_2>
+                                   business_finantial.docx
+                               </p>
+                            </div>
+                        </div>
+                    <div class=container_2>
+                        <div class=file_size>
+                            <p class=file_size_text>FILE SIZE</p>
+                        </div>
+                        <div class=kb_1>
+                            <p class=kb_1_text>78kb</p>
+                        </div>
+                        <div class=kb_2>
+                            <p class=kb_2_text>26kb</p>
+                        </div>
+                    </div>
+                    <div class=container_3>
+                        <div class=number_words>
+                            <p>NUMBER OF WORDS</p>
+                        </div>
+                        <div class=num_1>
+                            <p class=num_1_text>842</p>
+                        </div>
+                        <div class=num_2>
+                             <p class=num_2_text>2,326</p>
+                        </div>
+                         </div>
+                    <div class=container_4>
+                        <div class=remove>
+                            <p class=remove_text>REMOVE</p>
+                        </div>
+                    <div class=trash_1>
+                        <img class=img_trash
+                             src=../img/trash.png
+                             alt=trash>
+                        </div>
+                    <div class=trash_2>
+                        <img class=img_trash_2
+                             src=../img/trash.png
+                             alt=trash>
+                        </div>
+                        </div>
+                </div>
+                </div>
+        </section>
+        <section class=choose>
+            <div class=choose_1>
+                <div class=choose_1_number>
+                    <p class=number_2>2</p>
+                </div>
+                <div class=choose_1_text_block>
+                    <p class=choose_1_text>
+                      Choose your lanquages parings
+                    </p>
+                </div>
+            </div>
+            <div class=choose_2>
+                <div class=choose_2_text>
+                    <p>From</p>
+                </div>
+                <div class=choose_2_select>
+                    <select class=select_1>
+                        <option value=English>English</option>
+                        <option value=Ukrainian>Ukrainian</option>
+                        <option value=Franch>Franch</option>
+                        <option value=Russian>Russian</option>
+                    </select>
+                </div>
+            </div>
+            <div class=choose_3>
+                <div class=choose_3_text>
+                    <p>To</p>
+                </div>
+                <div class=choose_3_select_2>
+                    <select class=select_2>
+                        <option value=Arabic>Arabic</option>
+                        <option value=German>German</option>
+                        <option value=Franch>Franch</option>
+                        <option value=Russian>Russian</option>
+                    </select>
+                </div>
+                <div class=choose_3_select_3>
+                    <select class=select_3>
+                        <option value=Kurdish>Kurdish</option>
+                        <option value=German>German</option>
+                        <option value=Franch>Franch</option>
+                        <option value=Russian>Russian</option>
+                    </select>
+                </div>
+                <div class=choose_3_trash>
+                    <img class="img_trash" 
+                         src="../img/trash.png" 
+                         alt="trash">
+                </div>
+                <div class=choose_3_button>
+                    <button class=add_button>
+                        <img  src=../img/plus.png 
+                              class=plus>
+                        ADD
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class=sec_3_4>
+            <div class=three>
+                <div class=wrapper_three_1>
+                    <div class=number_3>
+                        <p class=number_3_text>3</p>
+                    </div>
+                    <div class=number_3_text_wrap>
+                        <p>Select your desired tone</p>
+                    </div>
+                </div>
+             <div class=wrapper_main_three>
+                <div class=wrapper_three_2>
+                    <label  for=comments 
+                            class=three_label_1>
+                        <input type=radio 
+                               hidden 
+                               required
+                               id=comments
+                               name=button_group>
+                        <div class=wrapper_label_th_1 >
+                            <i class="fa fa-comments i_font_2" 
+                               aria-hidden="true"></i>
+                            <p class=label_th_1_text>
+                                Friendly/Casual
+                            </p>
+                        </div>
+                    </div>
+                <div class=wrapper_three_3>
+                    <label  for=suitcase 
+                          class=three_label_1>
+                        <input type=radio 
+                               hidden 
+                               required
+                               id=suitcase
+                               name=button_group>
+                        <div class=wrapper_label_th_2>
+                                <i class="fa fa-suitcase i_font_3" 
+                                   aria-hidden="true"></i>
+                                <p class=label_th_1_text>
+                                    Corporate/Pro
+                                </p>
+                            </div>
+                    </div>
+                <div class=wrapper_three_4>
+                    <label class=three_label_1
+                           for=bullhorn>
+                        <input type=radio 
+                               hidden 
+                               required
+                               id=bullhorn
+                               name=button_group>
+                        <div class=wrapper_label_th_3>
+                               <i class="fa fa-bullhorn i_font_4" 
+                                 aria-hidden="true"></i>
+                            <p class=label_th_1_text>
+                                Media/Formal
+                            </p>
+                        </div>
+                            </div>
+                     </div>
+                    </div>
+            <div class=four>
+                <div class=wrapper_three_1>
+                    <div class=number_3>
+                        <p class=number_3_text>4</p>
+                    </div>
+                    <div class=number_3_text_wrap>
+                        <p>Tell us how urgent this job is</p>
+                    </div>
+                </div>
+                <div class=scroll_wrapper>
+                    <div class=scroll>
+                        <input required
+                               type=range 
+                               name=urgent
+                               min=0 max=100
+                               stop=25 value=50>      
+                    </div>
+                    <div class=scroll_text>
+                        <p>I GOT TIME</p>
+                        <p class=orange>AVERAGE</p>
+                        <p>YESTERDAY</p>
+                    </div>
+                </div>
+                <div class=block_info>
+                        <div class=head_block_info>
+                            <div class=time_line_img>
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                            </div>
+                            <div class=time_line_text>
+                                <span class=legend-title>
+                                    TIMELINE INFO
+                                </span>
+                            </div>
+                        </div>
+                        <div class=block_info_text>
+                            <p>With an <span class=orange>AVERAGE</span> timeline set up, 
+                                our expert translator can take a 
+                                reasonable amount of time perfecting 
+                                your translation</p>
+                        </div>
+                        </div>
+            </div>
+            </section>
+            <section class=sec_5>
+                <div class=title_5>
+                    <div class=number_5>
+                        <p class=number_3_text>5</p>
+                    </div>
+                    <div class=number_5_text_wrap>
+                        <p>Sign up and choose a payment method</p>
+                    </div>
+                </div>
+                <div class=bottom_text>
+                    <p class=text_already>
+                Already have a account with us ?
+                    </p>
+                <a href=#>Sign in</a>
+                </div>
+                <div class=input_name_wrapper>
+                    <div class=input_name>
+                        <p class=full_name>
+                    FULL NAME
+                        </p>       
+                    </div>
+                    <div class=input_form>
+                        <div>
+                        <input name="name" 
+                               id="name" 
+                               required 
+                               value="Mathieu Mayer" 
+                               placeholder="">
+                        <label for="name"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class=input_email_password_wrapper>
+                    <div class=input_email_wrapper>
+                        <div class=email_name>
+                                <p class=full_name>
+                                    EMAIL ADRESS
+                                </p>
+                            </div>
+                        <div class=email_form>
+                            <div>
+                                <input type="email" 
+                                       name="name" 
+                                       required 
+                                       id="email" 
+                                       value="mathieu.mm@me.com" 
+                                       placeholder="">
+                                <label for="email"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=input_password_wrapper>
+                        <div class=password>
+                             <div class=password_name>
+                                <p class=full_name>
+                            CHOOSE A PASSWORD
+                                </p>
+                            </div>
+                        </div>
+                        <div class=password_form>
+                            <div>
+                                <input minlength="8"
+                                    type="password" 
+                                    name="name" 
+                                    id="password" 
+                                    required 
+                                    title="Password length be 8 characters minimum">
+                                <label for="password"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
 
 <footer>
 
 </footer>
+        </div>
+</html>
