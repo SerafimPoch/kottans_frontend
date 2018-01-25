@@ -119,7 +119,9 @@ input[type=range]:before {
   input[name=var]:checked + .select_wrapper,
   input[name=button_group]:checked + .wrapper_label_th_1,
   input[name=button_group]:checked + .wrapper_label_th_2,
-  input[name=button_group]:checked + .wrapper_label_th_3
+  input[name=button_group]:checked + .wrapper_label_th_3,
+  input[name=payment]:checked + .payment_wrapper
+
   {
 	border: 4px solid rgb(131,175,228);
 	border-radius: 3px;
@@ -151,6 +153,13 @@ input[name=button_group]:checked + .wrapper_label_th_3:after {
   position: relative;
   top: -14px;
   right: -30px;
+}
+
+input[name=payment]:checked + .payment_wrapper:after {
+  content: url("../img/check.png");
+  position: relative;
+  top: -37px;
+  right: -50px;
 }
 
 input[name=name]{

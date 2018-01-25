@@ -722,6 +722,7 @@ margin-bottom: 10px;
   .sec_5 {
 	  display: flex;
 	  flex-flow: column wrap;
+	  margin-bottom: 20px;
   }
 
   .title_5 {
@@ -767,5 +768,32 @@ margin-bottom: 35px;
   }
 
   .input_password_wrapper {
-		padding-left: 20px;
+	padding-left: 20px;
+  }
+
+  .sec_6 {
+	  width: 650px;
+	display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 87px;
+  margin-bottom: 50px;
+  }
+
+  .payment_wrapper {
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: center;
+	  align-items: center;
+	  width: 190px;
+	  height: 80px;
+	border: 0.5px solid #c9d0e1;
+	border-radius: 4px;
+	background-color: rgb(247,247,250);
+	cursor: pointer;
+  }
+
+  .visa_img, .paypal_img, .amazon_img {
+	  width: 90px;
+	  height: 20px;
   }
