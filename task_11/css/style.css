@@ -797,3 +797,25 @@ margin-bottom: 35px;
 	  width: 90px;
 	  height: 20px;
   }
+
+  .sec_7 {
+	  width: 650px;
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: space-around;
+	  margin-left: 100px;
+	  margin-bottom: 80px;
+  }
+
+  .card_number {
+	  display: flex;
+	  flex-flow: column wrap;
+  }
+
+  .expire_date {
+	  margin-top: 8px;
+  }
+
+  .code {
+	margin-top: 8px;
+  }
