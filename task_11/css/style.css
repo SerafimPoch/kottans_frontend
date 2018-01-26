@@ -64,6 +64,7 @@ main {
 	border: 0.5px solid #c9d0e1;
 	border-radius: 4px;
 	margin: 20px auto;
+	margin-bottom: 80px;
 	background-color: white;
 	width: 76%;
 	height: 100%;
@@ -621,7 +622,7 @@ margin-bottom: 10px;
 	margin-bottom: 10px;
 }
 
-.three_label_1, .three_label_2 {
+.three_label_1, .three_label_2, .upload_label {
 	padding-left: 50px;
 	margin-bottom: 17px;
 }
@@ -848,4 +849,37 @@ margin-bottom: 35px;
   .check_text {
 	  font-size: 12px;
 	  color: rgb(110, 118, 143);
+  }
+
+
+  /* ==========FOOTER========== */
+
+  .sec_footer {
+	    display: flex;
+      flex-flow: row wrap;
+justify-content: space-around;
+  }
+
+  .footer_text_block {
+	  display: flex;
+    flex-flow: column wrap;
+  }
+
+  .footer_text_block_head {
+	  display: flex;
+	flex-flow: row wrap;
+  }
+
+  .footer_text_block_main {
+	  display: flex;
+	flex-flow: column wrap;
+  }
+
+  .foot_main_sub {
+	display: flex;
+  flex-flow: row wrap;
+  }
+
+  .footer_image {
+	  margin-left: 80px;
   }
