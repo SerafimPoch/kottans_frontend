@@ -35,7 +35,7 @@
 </header>
 
 <main>
-    <section class=order_list>
+    <section class=sec_1>
         <div class=order_wrapper>
     <div class=left_main>
         <div class=left_1>
@@ -163,15 +163,23 @@
                     <p class=small_doc_text_style>(Doc, Docx, Text, PDF, Markdown)</p>
                 </div>
             </div>
-            <div class="upload_file">
-                    <label for="upload" 
-                          class="file-upload__label">
-                        Upload a new file
-                    <input id="upload" 
-                           class="file-upload__input" 
-                           type="file" 
-                           name="file-upload">
-                    </label>
+            <div class="upload_file_wrapper">
+                    <div class=wrapper_three_2>
+                            <label  for=comments 
+                                    class=three_label_1>
+                                <input type=file 
+                                       hidden 
+                                       required
+                                       id=comments
+                                       name=button_group>
+                                <div class=wrapper_label_th_1 >
+                                        <i class="fa fa-cloud-upload i_font_2" 
+                                           aria-hidden="true"></i>
+                                    <p class=label_th_1_text>
+                                        Upload a new file
+                                    </p>
+                        </div>
+                    </div>    
                 </div>
              <div class=upload_table>
                 <div class=up_tb_container>
@@ -548,6 +556,19 @@
                                placeholder=''>
                         <label for=code></label>           
                     </div>
+                </div>
+            </section>
+            <section class=sec_8>
+                <div class=check_text_wrapper>
+                    <input type=checkbox>
+                    <p class=check_text>
+                        I agree to the
+                        <a href=#>Terms & Conditions</a>
+                    </p>
+                </div>
+                <div class=button_order_2>
+                    <button class=place_order>PLACE ORDER</button>
+                    <button class=print_a_quote>PRINT A QUOTE</button>
                 </div>
             </section>
     </main>

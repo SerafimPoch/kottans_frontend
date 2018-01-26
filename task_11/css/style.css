@@ -83,7 +83,7 @@ main {
 	padding-left: 20px;
 }
 
-.order_list {
+.sec_1 {
 	border-bottom: 0.5px solid #c9d0e1;
 }
 
@@ -355,7 +355,7 @@ main {
     padding-top: 11px;
 }
 
-.upload_file {
+.upload_file_wrapper {
   display:flex;
   margin-left: 50px;
   margin-bottom: 25px;
@@ -612,7 +612,7 @@ margin-bottom: 10px;
   flex-flow: column wrap;
 }
 
-.wrapper_three_1, .wrapper_three_2 .wrapper_three_3, .title_5 {
+.wrapper_three_1, .wrapper_three_2 .wrapper_three_3, .title_5, .upload_file {
 	  display: flex;
     flex-flow: row wrap;
 }
@@ -743,9 +743,8 @@ margin-bottom: 35px;
 	  color: rgb(165,171,197);
   }
 
-  a:hover {
+  a {
 	color: rgb(165,171,197);
-	font-size: 14px;
   }
 
   .input_name_wrapper {
@@ -818,4 +817,35 @@ margin-bottom: 35px;
 
   .code {
 	margin-top: 8px;
+  }
+
+  .sec_8 {
+	  display: flex;
+	  flex-flow: row wrap;
+	  align-items: center;
+	  margin-left: 300px;
+	  margin-bottom: 70px;
+  }
+
+  .check_text_wrapper {
+	  display: flex;
+	  flex-flow: row wrap;
+	  align-items: center;
+  }
+
+  .check_text {
+	  padding-left: 10px;
+  }
+
+  .button_order_2 {
+	  display: flex;
+	  flex-flow: row wrap;
+	  width: 300px;
+	  margin-left: 20px;
+	  justify-content: space-around;
+  }
+
+  .check_text {
+	  font-size: 12px;
+	  color: rgb(110, 118, 143);
   }
