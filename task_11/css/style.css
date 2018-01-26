@@ -257,7 +257,7 @@ main {
 	margin: auto;
 }
 
-.select_what {
+.sec_2 {
 	display: flex;
 	justify-content: center;
 }
@@ -272,7 +272,7 @@ main {
 	color: rgb(110, 118, 143);
 }
 
-.three_labels {
+.sec_3 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -311,7 +311,7 @@ main {
 	padding-top: 5px;
 }
 
-.upload {
+.sec_4 {
 	display: flex;
 	flex-flow: column wrap;
 	margin-left: 50px;
@@ -510,7 +510,7 @@ main {
 	text-align: center;
 }
 
-.choose {
+.sec_5 {
 	  display: flex;
 	flex-flow: column wrap;
   margin-left: 50px;
@@ -600,7 +600,7 @@ margin-bottom: 50px;
 	margin-left: 20px;
 }
 
-.sec_3_4 {
+.sec_6 {
 	display: flex;
   flex-flow: row wrap;
 margin-left: 50px;
@@ -721,7 +721,7 @@ ul {
 	  margin-left: 50px;
   }
 
-  .sec_5 {
+  .sec_7 {
 	  display: flex;
 	  flex-flow: column wrap;
 	  margin-bottom: 20px;
@@ -772,7 +772,7 @@ margin-bottom: 35px;
 	padding-left: 20px;
   }
 
-  .sec_6 {
+  .sec_8 {
 	  width: 650px;
 	display: flex;
   flex-flow: row wrap;
@@ -799,7 +799,7 @@ margin-bottom: 35px;
 	  height: 20px;
   }
 
-  .sec_7 {
+  .sec_9 {
 	  width: 650px;
 	  display: flex;
 	  flex-flow: row wrap;
@@ -821,7 +821,7 @@ margin-bottom: 35px;
 	margin-top: 8px;
   }
 
-  .sec_8 {
+  .sec_10 {
 	  display: flex;
 	  flex-flow: row wrap;
 	  align-items: center;
@@ -855,7 +855,7 @@ margin-bottom: 35px;
 
   /* ==========FOOTER========== */
 
-  .sec_footer {
+  .sec_11 {
 	     display: flex;
        flex-flow: row wrap;
  justify-content: space-around;
