@@ -26,7 +26,8 @@
         <div>
             <button class=sign_in>
             <img    src=img/man-shape.png 
-                    class=face>
+                    class=face
+                    alt=man_shape>
                SIGN IN
             </button>
         </div>
@@ -68,9 +69,9 @@
         </div>
     </div>
         </div> 
-        <div class=button_order>
-            <button class=place_order>PLACE ORDER</button>
-            <button class=print_a_quote>PRINT A QUOTE</button>
+            <div class=button_order>
+                <button class=place_order>PLACE ORDER</button>
+                 <button class=print_a_quote>PRINT A QUOTE</button>
         </div>
             </div> 
     <div class=right>
@@ -97,18 +98,18 @@
                            href="mailto:help@qtest.com">
                            help@qtest.com
                         </a>
-                    </adress>
+                </adress>
         </div>
     </div> 
         </div>
     </section>
         <section class=sec_2>
             <div class=second_block>
-        <p class=second_block_text>SELECT WHAT YOU WANT TO TRANSLATE</p>
+                <p class=second_block_text>SELECT WHAT YOU WANT TO TRANSLATE</p>
             </div>
         </section>
     <section class=sec_3>
-        <div class=first_label>
+        <div class=label>
             <label class=select_type>
                 <input hidden required 
                        type=radio 
@@ -122,7 +123,7 @@
                 </div>
             </label>
         </div>
-            <div class=second_label>
+            <div class=label>
                  <label class=select_type>
                      <input hidden required 
                             type=radio 
@@ -136,7 +137,7 @@
                         </div>
                 </label>
             </div>
-                <div class=third_label>
+                <div class=label>
                     <label class=select_type>
                         <input hidden required 
                                type=radio 
@@ -230,17 +231,21 @@
                         <div class=remove>
                             <p class=remove_text>REMOVE</p>
                         </div>
-                    <div class=trash_1>
-                        <img class=img_trash
-                             src=img/trash.png
-                             alt=trash>
-                        </div>
-                    <div class=trash_2>
-                        <img class=img_trash_2
-                             src=img/trash.png
-                             alt=trash>
-                        </div>
-                        </div>
+                    <div class=trash>
+                        <button>
+                            <img class=img_trash
+                                 src=img/trash.png
+                                 alt=trash>
+                        </button>
+                    </div>
+                    <div class=trash>
+                        <button>
+                            <img class=img_trash
+                                 src=img/trash.png
+                                 alt=trash>
+                        </button>
+                    </div>
+                    </div>
                 </div>
                 </div>
         </section>
@@ -561,11 +566,13 @@
             <section class=sec_10>
                 <div class=check_text_wrapper>
                     <input type=checkbox>
+                <label>
                     <p class=check_text>
                         I agree to the
                         <a href=#>Terms & Conditions</a>
                     </p>
-                </div>
+                </label>
+                    </div>
                 <div class=button_order_2>
                     <button class=place_order>PLACE ORDER</button>
                     <button class=print_a_quote>PRINT A QUOTE</button>
