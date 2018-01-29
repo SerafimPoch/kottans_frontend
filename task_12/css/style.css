@@ -11,6 +11,7 @@ header {
       flex-flow: row wrap;
 justify-content: space-around;
     align-items: center;
+    border: 1px solid black; /* remove */
 }
 
 .pizza_logo {
@@ -21,4 +22,52 @@ justify-content: space-around;
 
 a {
     color: black;
+}
+
+.i_img_1, .i_img_2 {
+    padding-right: 1px;
+}
+
+/* ========== Main ========== */
+
+main {
+    display: flex;
+  flex-flow: column wrap;
+ margin-top: 50px;
+ border: 1px solid black; /* remove */
+}
+
+.add_button_wrapper {
+        display: flex;
+      flex-flow: row wrap;
+justify-content: center;
+  padding-right: 60px;
+}
+
+.add_button {
+    font-family: 'Righteous', cursive;
+      font-size: 14px; 
+          width: 160px;
+         height: 40px;
+        outline: 0;
+    background-color: rgb(0, 160, 27);
+
+}
+
+
+
+/* ========= Responsive ========== */
+
+@media screen and (max-width: 415px) {
+    .logo {
+        flex: 1 0 100%;
+       text-align: center;
+    }
+
+    .add_button {
+        font-size: 8px; 
+          width: 120px;
+         height: 20px;
+    }
+
 }
