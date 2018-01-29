@@ -1,3 +1,24 @@
 body {
-    background-color: aquamarine;
+    background-color: rgb(246, 197, 133);
+    font-family: 'Righteous', cursive;
+}
+
+ 
+/* ========== Header ========== */
+
+header {
+        display: flex;
+      flex-flow: row wrap;
+justify-content: space-around;
+    align-items: center;
+}
+
+.pizza_logo {
+    width: 170px;
+   height: 160px;
+   flex: 1 0 10%;
+}
+
+a {
+    color: black;
 }
