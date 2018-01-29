@@ -64,6 +64,10 @@ justify-content: center;
        text-align: center;
     }
 
+    .add_button_wrapper {
+        padding-left: 55px;
+    }
+
     .add_button {
         font-size: 8px; 
           width: 120px;
