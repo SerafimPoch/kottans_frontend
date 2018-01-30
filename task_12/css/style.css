@@ -123,24 +123,3 @@ color: white;
 }
 
 
-/* ========= Responsive ========== */
-
-@media screen and (max-width: 415px) {
-    .logo {
-        flex: 1 0 100%;
-  text-align: center;
-    }
-
-    .add_button_wrapper {
-        padding-left: 55px;
-    }
-
-    .add_button {
-        font-size: 8px; 
-          width: 120px;
-         height: 20px;
-    }
-
-}
-
-

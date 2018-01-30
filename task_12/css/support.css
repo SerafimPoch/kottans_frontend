@@ -15,7 +15,10 @@
           width: 120px;
          height: 20px;
     }
-
+    
+    .pizza_wrapper {
+        justify-content: center;
+    }
 }
 
 
