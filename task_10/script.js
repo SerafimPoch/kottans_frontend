@@ -51,10 +51,9 @@ const Faren = c => Math.round(c * (9/5) - 459.67)
 
 const Celc = k => Math.round(k - 273.15)
 
-const sendRequest = url => {  
-    const link = fetch(url)
-        .then(data => data.json())
-            .then(data =>{
+const sendRequest = async url => {  
+    const link = await fetch(url)
+    const data = await link.json()
         const main = () => {
             let weather = {} 
                 let second  = data.list[5].dt_txt
@@ -109,7 +108,6 @@ const sendRequest = url => {
                     main()
                 })
     main()
-})
         }
 
 const update = weather => {
