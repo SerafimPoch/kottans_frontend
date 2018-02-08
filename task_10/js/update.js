@@ -17,5 +17,5 @@ const update = weather => {
   icon_4.src = "img/" + weather.icon_4 + ".svg";
   icon_5.src = "img/" + weather.icon_5 + ".svg";
 
-  humidity_1.innerHTML = weather.humidity;
+  humidity_1.innerText = weather.humidity;
 };
