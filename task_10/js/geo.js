@@ -13,3 +13,11 @@ const updateByGeo = (lat, lon) => {
     key;
   sendRequest(url);
 };
+
+window.addEventListener("load", () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("No internet connection");
+  }
+});
