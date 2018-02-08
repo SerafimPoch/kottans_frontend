@@ -1,16 +1,16 @@
 const update = weather => {
-  data_2.innerHTML = weather.data_2;
-  data_3.innerHTML = weather.data_3;
-  data_4.innerHTML = weather.data_4;
-  data_5.innerHTML = weather.data_5;
+  data_2.innerText = weather.data_2;
+  data_3.innerText = weather.data_3;
+  data_4.innerText = weather.data_4;
+  data_5.innerText = weather.data_5;
 
-  temp_1.innerHTML = weather.temp_1;
-  temp_3.innerHTML = weather.temp_3;
-  temp_4.innerHTML = weather.temp_4;
-  temp_5.innerHTML = weather.temp_5;
-  temp_6.innerHTML = weather.temp_6;
+  temp_1.innerText = weather.temp_1;
+  temp_3.innerText = weather.temp_3;
+  temp_4.innerText = weather.temp_4;
+  temp_5.innerText = weather.temp_5;
+  temp_6.innerText = weather.temp_6;
 
-  loc_1.innerHTML = weather.loc;
+  loc_1.innerText = weather.loc;
   icon.src = "img/" + weather.icon + ".svg";
   icon_2.src = "img/" + weather.icon_2 + ".svg";
   icon_3.src = "img/" + weather.icon_3 + ".svg";
